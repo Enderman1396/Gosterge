@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cyi6mq0yv1s6r"]
+
+[ext_resource type="Script" uid="uid://caulrcw0w13eg" path="res://nişangah.gd" id="1_qt0us"]
+[ext_resource type="Script" uid="uid://ctgonpjlwi8nj" path="res://line_2d.gd" id="2_k8giv"]
+
+[node name="Node2D" type="Node2D" unique_id=724832128]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1409071797]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1150.0
+offset_bottom = 650.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Nişangah" type="ColorRect" parent="." unique_id=1865016615]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 319.8
+offset_top = 319.8
+offset_right = 419.8
+offset_bottom = 419.8
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.1, 0.1)
+color = Color(1, 0, 0, 1)
+script = ExtResource("1_qt0us")
+min_pos = Vector2(170, 170)
+max_pos = Vector2(569.8, 569.8)
+
+[node name="Line2D" type="Line2D" parent="." unique_id=634121520]
+position = Vector2(120, 120)
+scale = Vector2(0.1, 0.1)
+points = PackedVector2Array(0, 0, 4096, 0, 4096, 4096, 0, 4096, 0, 0)
+width = 40.0
+joint_mode = 2
+begin_cap_mode = 2
+script = ExtResource("2_k8giv")
+
+[node name="Line2D2" type="Line2D" parent="Line2D" unique_id=1238737644]
+scale = Vector2(0.99999994, 0.99999994)
+points = PackedVector2Array(2048, 0, 2048, 4096, 2048, 2048, 0, 2048, 4096, 2048)
+width = 20.0
+default_color = Color(1, 1, 0, 1)
+joint_mode = 2
+begin_cap_mode = 2
+script = ExtResource("2_k8giv")
